@@ -4,7 +4,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { addContactsThunk } from '../../redux/thunk';
 
 export const Form = () => {
-  const contacts = useSelector(state => state.contacts.item);
+  const contacts = useSelector(state => state.contacts.items);
   const dispatch = useDispatch();
 
   const nameInputId = nanoid();
