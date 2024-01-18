@@ -1,4 +1,4 @@
-import { Contactslist } from 'components/Contacts/ContactsList';
+import { ContactsList } from 'components/Contacts/ContactsList';
 import { Form } from 'components/Form/Form';
 
 import css from './App.module.css';
@@ -12,7 +12,7 @@ export const App = () => {
         <Form />
         <h2>Contacts</h2>
         <Filter />
-        <Contactslist />
+        <ContactsList />
       </div>
     </>
   );

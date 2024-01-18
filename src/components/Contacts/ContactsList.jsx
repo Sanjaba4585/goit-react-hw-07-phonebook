@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import css from './Contacts.module.css';
 import { deleteContactsThunk, getContactsThunk } from '../../redux/thunk';
 
-export const Contactslist = () => {
+export const ContactsList = () => {
   const isLoading = useSelector(state => state.contacts.isLoading);
   const contacts = useSelector(state => state.contacts.items);
   console.log(contacts);
@@ -21,7 +21,7 @@ export const Contactslist = () => {
 
   const getFilterContact = (contacts, filter1) => {
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter1.filter)
+      contact.name.toLowerCase().includes(filter1.toLowerCase())
     );
   };
 
