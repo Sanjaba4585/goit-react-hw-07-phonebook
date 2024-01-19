@@ -18,7 +18,11 @@ export const Form = () => {
       name: e.target.name.value,
       number: e.target.number.value,
     };
-    if (contacts.find(({ name }) => name === contact.name)) {
+    if (
+      contacts.find(
+        ({ name }) => name.toLowerCase() === contact.name.toLowerCase()
+      )
+    ) {
       alert('Oops!');
       return;
     }
