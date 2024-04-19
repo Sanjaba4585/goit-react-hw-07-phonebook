@@ -1,19 +1,22 @@
-import { ContactsList } from 'components/Contacts/ContactsList';
-import { Form } from 'components/Form/Form';
+import { lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import css from './App.module.css';
-import { Filter } from 'components/Filter/Filter';
-
+const Home = lazy(() => import('../../pages/home/Home'));
 export const App = () => {
   return (
-    <>
-      <div className={css.container}>
-        <h1>Phonebook</h1>
-        <Form />
-        <h2>Contacts</h2>
-        <Filter />
-        <ContactsList />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      {/* <Route path="/catalog" element={<ContactsList />} /> */}
+    </Routes>
+    //   <>
+    //     <div className={css.container}>
+    //       <h1>Phonebook</h1>
+    //       <Form />
+    //       <h2>Contacts</h2>
+    //       <Filter />
+    //       <ContactsList />
+    //     </div>
+    //   </>
+    // );
   );
 };
